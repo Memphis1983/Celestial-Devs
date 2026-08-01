@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #07090e;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    selection-background-color: #e2b859;
+    selection-color: #07090e;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(226, 184, 89, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(226, 184, 89, 0.5);
+}
+
+/* Celestial Glow Animations */
+@keyframes goldPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 6s ease-in-out infinite;
+}
+
+.bg-gold-shimmer {
+  background: linear-gradient(90deg, rgba(226,184,89,0.15) 0%, rgba(243,209,121,0.4) 50%, rgba(226,184,89,0.15) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 4s infinite linear;
+}
+
+/* Text Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFF5DB 0%, #E2B859 50%, #B89235 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-celestial {
+  background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 50%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Glass Card */
+.glass-card {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 184, 89, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card:hover {
+  border-color: rgba(226, 184, 89, 0.35);
+  box-shadow: 0 15px 35px -10px rgba(226, 184, 89, 0.1);
+}
+
+/* Subtle Grid Background pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Celestial Devs",
+  "description": "Celestial Devs — AI Engineering Studio designing intelligent digital products, cloud-native software, and enterprise AI solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
