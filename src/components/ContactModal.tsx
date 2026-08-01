@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ArrowUpRight, CheckCircle2, Sparkles, Send, Loader2 } from 'lucide-react';
+import { X, CheckCircle2, Sparkles, Send, Loader2 } from 'lucide-react';
 import { ContactFormData } from '../types';
 
 interface ContactModalProps {
@@ -17,7 +17,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     name: '',
     email: '',
     company: '',
-    projectType: prefillCategory || 'AI Agent Workflows & RAG',
+    projectType: prefillCategory || 'Knowledge Retrieval & Data Systems',
     budget: '$50,000 - $100,000',
     timeline: '4 - 8 Weeks',
     details: ''
@@ -71,7 +71,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
       name: '',
       email: '',
       company: '',
-      projectType: 'AI Agent Workflows & RAG',
+      projectType: 'Knowledge Retrieval & Data Systems',
       budget: '$50,000 - $100,000',
       timeline: '4 - 8 Weeks',
       details: ''
@@ -86,7 +86,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         {/* Close Button */}
         <button
           onClick={handleReset}
-          className="absolute top-5 right-5 p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white"
+          className="absolute top-5 right-5 p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
@@ -103,7 +103,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 Inquiry Logged • Reference #{receiptId}
               </span>
               <h2 className="text-2xl font-serif font-bold text-white">
-                Engineering Consultation Requested
+                Architecture Review Requested
               </h2>
               <p className="text-xs text-slate-300 leading-relaxed font-light">
                 Thank you, <span className="text-white font-medium">{formData.name}</span>. Our technical leadership team will review your project requirements for <span className="text-amber-300">{formData.projectType}</span> and contact you within 24 business hours.
@@ -119,7 +119,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
             <button
               onClick={handleReset}
-              className="px-8 py-3 rounded-full text-xs font-semibold text-slate-950 bg-gradient-to-r from-amber-300 to-amber-500 hover:brightness-110 shadow-[0_0_20px_rgba(226,184,89,0.3)]"
+              className="px-8 py-3 rounded-full text-xs font-semibold text-slate-950 bg-gradient-to-r from-amber-300 to-amber-500 hover:brightness-110 shadow-[0_0_20px_rgba(226,184,89,0.3)] cursor-pointer"
             >
               Return to Celestial Devs Studio
             </button>
@@ -131,13 +131,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             <div className="space-y-1 pr-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>PROJECT INTAKE</span>
+                <span>TECHNICAL INTAKE</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">
-                Book Engineering Consultation
+                Schedule an Architecture Review
               </h2>
               <p className="text-xs text-slate-300 font-light">
-                Tell us about your product goals, technical constraints, or upcoming AI initiative.
+                Tell us about your product goals, technical constraints, or upcoming software initiative.
               </p>
             </div>
 
@@ -151,7 +151,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Dr. Alex Vance"
+                    placeholder="e.g. Alex Vance"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-amber-400"
@@ -180,7 +180,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   </label>
                   <input
                     type="text"
-                    placeholder="e.g. Aegis Health Systems"
+                    placeholder="e.g. Enterprise Systems Corp"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-amber-400"
@@ -196,10 +196,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-amber-400"
                   >
-                    <option value="AI Agent Workflows & RAG">AI Agent Workflows & RAG</option>
-                    <option value="High-Performance SaaS & Web">High-Performance SaaS & Web</option>
-                    <option value="Cloud Architecture & DevOps">Cloud Architecture & DevOps</option>
-                    <option value="Intelligent Enterprise Automation">Intelligent Enterprise Automation</option>
+                    <option value="Knowledge Retrieval & Data Systems">Knowledge Retrieval & Data Systems</option>
+                    <option value="High-Performance SaaS & Web Applications">High-Performance SaaS & Web Applications</option>
+                    <option value="Cloud Infrastructure & DevOps">Cloud Infrastructure & DevOps</option>
+                    <option value="Workflow Automation & System Integration">Workflow Automation & System Integration</option>
                   </select>
                 </div>
               </div>
@@ -242,7 +242,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 </label>
                 <textarea
                   rows={3}
-                  placeholder="Outline any key deliverables, integration targets, or technical benchmarks..."
+                  placeholder="Outline key deliverables, integration targets, or technical benchmarks..."
                   value={formData.details}
                   onChange={(e) => setFormData({ ...formData, details: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 resize-none"
@@ -261,12 +261,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 {loading ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin text-slate-950" />
-                    <span>Logging Consultation Request...</span>
+                    <span>Logging Inquiry...</span>
                   </>
                 ) : (
                   <>
                     <Send className="w-4 h-4 text-slate-950" />
-                    <span>Submit Consultation Request</span>
+                    <span>Schedule Architecture Review</span>
                   </>
                 )}
               </button>

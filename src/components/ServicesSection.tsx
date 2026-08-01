@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SERVICES_DATA } from '../data/mockData';
 import { ServiceItem } from '../types';
 import { ServiceDetailModal } from './ServiceDetailModal';
-import { Cpu, Layout, Cloud, Zap, ArrowRight, Sparkles, Code2 } from 'lucide-react';
+import { Cpu, Layout, Cloud, Zap, ArrowRight, Sparkles } from 'lucide-react';
 
 interface ServicesSectionProps {
   onOpenContact: (prefillCategory?: string) => void;
@@ -14,8 +14,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
 
   const categories = [
     { id: 'all', label: 'All Disciplines' },
-    { id: 'ai', label: 'AI & Autonomous Agents' },
-    { id: 'web', label: 'SaaS & Web Systems' },
+    { id: 'ai', label: 'Data & Knowledge Systems' },
+    { id: 'web', label: 'SaaS & Web Applications' },
     { id: 'cloud', label: 'Cloud & Infrastructure' },
     { id: 'automation', label: 'Workflow Automation' }
   ];
@@ -48,13 +48,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-mono">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>CORE DISCIPLINES</span>
+              <span>ENGINEERING DISCIPLINES</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-              Architectural Capabilities
+              Software Engineering Capabilities
             </h2>
             <p className="text-sm sm:text-base text-slate-400 font-light leading-relaxed">
-              We design, build, and deploy end-to-end intelligent software systems. Every component is engineered with enterprise security, sub-second latency, and long-term maintainability.
+              We design, build, and deploy resilient software systems. Every component is engineered with security, performance, and long-term maintainability in mind.
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all ${
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all cursor-pointer ${
                   selectedCategory === cat.id
                     ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-semibold shadow-[0_0_15px_rgba(226,184,89,0.3)]'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
@@ -139,13 +139,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
 
               {/* Action Button */}
               <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                <span className="text-xs font-mono text-emerald-400">
+                <span className="text-xs font-mono text-amber-400">
                   {service.sla}
                 </span>
 
                 <button
                   onClick={() => setActiveModalService(service)}
-                  className="inline-flex items-center gap-2 text-xs font-semibold text-amber-300 hover:text-amber-200 group-hover:translate-x-1 transition-all"
+                  className="inline-flex items-center gap-2 text-xs font-semibold text-amber-300 hover:text-amber-200 group-hover:translate-x-1 transition-all cursor-pointer"
                 >
                   <span>Detailed Specifications</span>
                   <ArrowRight className="w-3.5 h-3.5" />

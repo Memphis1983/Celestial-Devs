@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cpu, Sparkles, Send, CheckCircle2, AlertTriangle, Layers, Clock, ShieldCheck, Download, ArrowRight, Loader2, RefreshCw } from 'lucide-react';
+import { Cpu, Sparkles, Layers, Clock, ShieldCheck, ArrowRight, Loader2, RefreshCw } from 'lucide-react';
 import { ArchitectureBlueprint } from '../types';
 
 interface ArchitectureEstimatorProps {
@@ -11,9 +11,9 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
   const [projectDescription, setProjectDescription] = useState('');
   const [targetScale, setTargetScale] = useState<'Standard' | 'Advanced' | 'Enterprise'>('Advanced');
   const [keyRequirements, setKeyRequirements] = useState<string[]>([
-    'High Availability (99.9%)',
-    'AI Agent Workflows',
-    'Sub-100ms Latency'
+    'High Availability Target',
+    'Structured Model Pipeline',
+    'Low Latency Data Retrieval'
   ]);
 
   const [loading, setLoading] = useState(false);
@@ -46,9 +46,9 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
     setLoading(true);
 
     const steps = [
-      'Parsing product requirements & functional goals...',
-      'Evaluating LLM model selection & RAG context limits...',
-      'Designing vector indexing strategy & database schema...',
+      'Parsing system requirements & functional goals...',
+      'Evaluating model selection & retrieval context limits...',
+      'Designing database schema & indexing strategy...',
       'Synthesizing cloud infrastructure & zero-trust security model...'
     ];
 
@@ -60,14 +60,14 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
       if (currentStepIndex < steps.length) {
         setLoadingStep(steps[currentStepIndex]);
       }
-    }, 800);
+    }, 700);
 
     try {
       const response = await fetch('/api/generate-architecture', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          projectTitle: projectTitle || 'AI-Powered Digital System',
+          projectTitle: projectTitle || 'Enterprise Digital System',
           projectDescription,
           targetScale,
           keyRequirements: keyRequirements.join(', ')
@@ -84,7 +84,7 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
       }
     } catch (err: any) {
       clearInterval(stepInterval);
-      setErrorMsg('Could not connect to AI Architecture Generator. Please try again.');
+      setErrorMsg('Could not connect to Architecture Generator. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -98,13 +98,13 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
             <Cpu className="w-4 h-4 text-amber-400" />
-            <span>INTERACTIVE AI STUDIO TOOL</span>
+            <span>INTERACTIVE ARCHITECTURE BUILDER</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-            AI Architecture Blueprint Generator
+            Architecture Blueprint Generator
           </h2>
           <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed">
-            Describe your product concept or select an archetype below. Celestial Devs’ AI Studio Engine will synthesize a tailored technical architecture, stack recommendation, timeline, and risk mitigation plan in real time.
+            Describe your product requirements or select a reference blueprint below. Celestial Devs’ Architecture Engine will synthesize a tailored technical architecture, stack recommendation, timeline, and risk mitigation plan.
           </p>
         </div>
 
@@ -119,52 +119,52 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
                 1. System Parameters
               </span>
               <span className="text-[10px] font-mono text-slate-400">
-                Powered by Gemini 2.5
+                Powered by Celestial Engine
               </span>
             </div>
 
             {/* Quick Presets */}
             <div className="space-y-2">
-              <span className="text-xs font-medium text-slate-300 block">Quick Archetype Presets:</span>
+              <span className="text-xs font-medium text-slate-300 block">Quick Reference Blueprints:</span>
               <div className="flex flex-wrap gap-2">
                 <button
                   type="button"
                   onClick={() =>
                     handleQuickPreset(
-                      'Aegis Financial Audit Agent',
-                      'Autonomous multi-agent platform for real-time SEC document parsing, clause verification, and vector search with RAG.',
+                      'Document Intelligence Platform',
+                      'Automated document ingestion system for regulatory disclosures, clause verification, and structured data extraction.',
                       'Enterprise'
                     )
                   }
-                  className="px-2.5 py-1 rounded-lg bg-slate-900 border border-amber-500/20 text-[11px] text-slate-300 hover:text-amber-300 hover:border-amber-400 transition-colors"
+                  className="px-2.5 py-1 rounded-lg bg-slate-900 border border-amber-500/20 text-[11px] text-slate-300 hover:text-amber-300 hover:border-amber-400 transition-colors cursor-pointer"
                 >
-                  Fintech RAG Agent
+                  Document Intelligence
                 </button>
                 <button
                   type="button"
                   onClick={() =>
                     handleQuickPreset(
-                      'SaaS High-Throughput Analytics Dashboard',
+                      'High-Throughput Analytics Dashboard',
                       'Edge-rendered Next.js dashboard with WebSockets streaming and micro-frontend architecture for high-concurrency event telemetry.',
                       'Advanced'
                     )
                   }
-                  className="px-2.5 py-1 rounded-lg bg-slate-900 border border-amber-500/20 text-[11px] text-slate-300 hover:text-amber-300 hover:border-amber-400 transition-colors"
+                  className="px-2.5 py-1 rounded-lg bg-slate-900 border border-amber-500/20 text-[11px] text-slate-300 hover:text-amber-300 hover:border-amber-400 transition-colors cursor-pointer"
                 >
-                  SaaS Analytics Platform
+                  Analytics Platform
                 </button>
                 <button
                   type="button"
                   onClick={() =>
                     handleQuickPreset(
-                      'Intelligent Customer Service Bot Engine',
-                      'Multi-modal AI support hub integrated with CRM, ticket routing, and zero-retention privacy guardrails.',
+                      'Customer Service Hub Integration',
+                      'Intelligent support routing engine integrated with CRM ticketing, context synthesis, and privacy guardrails.',
                       'Standard'
                     )
                   }
-                  className="px-2.5 py-1 rounded-lg bg-slate-900 border border-amber-500/20 text-[11px] text-slate-300 hover:text-amber-300 hover:border-amber-400 transition-colors"
+                  className="px-2.5 py-1 rounded-lg bg-slate-900 border border-amber-500/20 text-[11px] text-slate-300 hover:text-amber-300 hover:border-amber-400 transition-colors cursor-pointer"
                 >
-                  Automated Customer Hub
+                  Customer Support Hub
                 </button>
               </div>
             </div>
@@ -176,7 +176,7 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
                 </label>
                 <input
                   type="text"
-                  placeholder="e.g. NextGen Autonomous Analytics Engine"
+                  placeholder="e.g. Real-Time Telemetry & Analytics Platform"
                   value={projectTitle}
                   onChange={(e) => setProjectTitle(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
@@ -185,11 +185,11 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
 
               <div>
                 <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                  Product Vision & Goals <span className="text-amber-400">*</span>
+                  Product Requirements & Vision <span className="text-amber-400">*</span>
                 </label>
                 <textarea
                   rows={4}
-                  placeholder="Describe your target application, key features, user flow, or business challenges you want to solve with code and AI..."
+                  placeholder="Describe your target application, key features, user flow, or operational challenges you want to solve..."
                   value={projectDescription}
                   onChange={(e) => setProjectDescription(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-950/80 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors resize-none"
@@ -207,7 +207,7 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
                       key={scale}
                       type="button"
                       onClick={() => setTargetScale(scale)}
-                      className={`py-2 px-3 rounded-xl text-xs font-medium border transition-all ${
+                      className={`py-2 px-3 rounded-xl text-xs font-medium border transition-all cursor-pointer ${
                         targetScale === scale
                           ? 'bg-amber-500/20 border-amber-400 text-amber-300 font-semibold'
                           : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:text-white'
@@ -226,11 +226,11 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    'High Availability (99.9%)',
-                    'AI Agent Workflows',
-                    'Sub-100ms Latency',
-                    'SOC2 / HIPAA Guardrails',
-                    'Multi-Modal Vision/Audio',
+                    'High Availability Target',
+                    'Structured Model Pipeline',
+                    'Low Latency Data Retrieval',
+                    'SOC2 / Compliance Guardrails',
+                    'Multi-Format Data Processing',
                     'Real-Time WebSockets'
                   ].map((req) => {
                     const isSelected = keyRequirements.includes(req);
@@ -239,7 +239,7 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
                         key={req}
                         type="button"
                         onClick={() => toggleRequirement(req)}
-                        className={`px-2.5 py-1 rounded-lg text-[11px] border transition-all ${
+                        className={`px-2.5 py-1 rounded-lg text-[11px] border transition-all cursor-pointer ${
                           isSelected
                             ? 'bg-amber-500/20 border-amber-400 text-amber-300'
                             : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-300'
@@ -288,7 +288,7 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
               {blueprint && (
                 <button
                   onClick={() => setBlueprint(null)}
-                  className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-amber-300 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-amber-300 transition-colors cursor-pointer"
                 >
                   <RefreshCw className="w-3.5 h-3.5" />
                   <span>Reset Specification</span>
@@ -349,7 +349,7 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
                     </div>
 
                     <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 space-y-1">
-                      <span className="text-[10px] text-slate-500 font-mono block">AI & ML</span>
+                      <span className="text-[10px] text-slate-500 font-mono block">Data & AI</span>
                       <span className="text-slate-200 font-medium block truncate">
                         {blueprint.recommendedStack.aiAndMl.join(', ')}
                       </span>
@@ -396,7 +396,7 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
                     <div>
                       <span className="text-[10px] font-mono text-slate-400 uppercase block">Estimated Delivery</span>
                       <span className="text-sm font-bold text-white">
-                        ~{blueprint.estimatedTimelineWeeks} Weeks Sprint Cycle
+                        ~{blueprint.estimatedTimelineWeeks} Weeks Engineering Sprint
                       </span>
                     </div>
                   </div>
@@ -415,13 +415,13 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
                 {/* Next Action */}
                 <div className="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
                   <span className="text-xs text-slate-400">
-                    Ready to build this architecture with Celestial Devs?
+                    Ready to discuss this architecture with Celestial Devs?
                   </span>
                   <button
                     onClick={() => onOpenContact(blueprint.projectTitle)}
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-slate-950 bg-gradient-to-r from-amber-300 to-amber-500 hover:brightness-110 shadow-[0_0_15px_rgba(226,184,89,0.3)] transition-all cursor-pointer"
                   >
-                    <span>Execute This Blueprint</span>
+                    <span>Schedule Architecture Review</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -437,7 +437,7 @@ export const ArchitectureEstimator: React.FC<ArchitectureEstimatorProps> = ({ on
                     No Architecture Generated Yet
                   </span>
                   <p className="text-xs text-slate-500">
-                    Fill in your product vision on the left or select a preset to generate a full technical specification.
+                    Fill in your product vision on the left or select a reference blueprint to generate a full technical specification.
                   </p>
                 </div>
               </div>

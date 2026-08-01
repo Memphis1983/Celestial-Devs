@@ -3,164 +3,164 @@ import { ServiceItem, CaseStudy, Article } from '../types';
 export const SERVICES_DATA: ServiceItem[] = [
   {
     id: 'ai-solutions',
-    title: 'Autonomous AI Agents & RAG Architecture',
+    title: 'Knowledge Retrieval & Data Processing Systems',
     category: 'ai',
-    badge: 'Core Expertise',
-    shortDescription: 'Enterprise-grade LLM pipelines, autonomous multi-agent orchestration systems, and deterministic retrieval-augmented generation (RAG).',
-    fullDescription: 'We build end-to-end intelligent agent infrastructure engineered for precision, high throughput, and context-aware enterprise operations. From hybrid vector search to multi-modal reasoning models, we turn generative AI into scalable product capability.',
+    badge: 'Knowledge Systems',
+    shortDescription: 'Custom information retrieval, unstructured document indexing, and automated content classification built for precision and security.',
+    fullDescription: 'Problem: Organizations waste substantial time attempting to locate critical facts buried across unstructured documents, legacy systems, and disparate databases.\nSolution: We engineer deterministic knowledge retrieval architectures that index multi-format records, synthesize accurate answers with inline citations, and protect data privacy.\nTechnology: Built with semantic vector indexing, hybrid search algorithms, document parsing pipelines, and custom security guardrails.',
     iconName: 'Cpu',
     deliverables: [
-      'Multi-Agent Workflow Orchestrators',
-      'Hybrid Semantic & Vector Search (RAG)',
-      'Custom LLM Fine-Tuning & Quantization',
-      'Enterprise Guardrails & Safety Proxies',
-      'Real-Time Streaming AI Microservices'
+      'Information Retrieval Architectures',
+      'Document Ingestion & Chunking Pipelines',
+      'Citation & Accuracy Guardrails',
+      'Hybrid Semantic & Keyword Search',
+      'Enterprise Data Privacy Isolation'
     ],
-    techStack: ['Gemini 2.5/3.0', 'LangChain', 'LlamaIndex', 'Qdrant', 'PyTorch', 'FastAPI', 'Docker'],
-    sla: '99.95% Availability Target',
-    idealFor: 'SaaS platforms & Enterprise teams automating complex decision workflows.'
+    techStack: ['Gemini API', 'LangChain', 'LlamaIndex', 'Qdrant', 'PyTorch', 'FastAPI', 'Docker'],
+    sla: 'High Precision & Verifiable Data Retrieval',
+    idealFor: 'Teams looking to unlock unstructured document repositories and automate manual search.'
   },
   {
     id: 'web-engineering',
-    title: 'High-Performance Web & SaaS Systems',
+    title: 'High-Performance Modern Web Applications',
     category: 'web',
-    badge: 'Modern Fullstack',
-    shortDescription: 'Ultra-fast Next.js and React web applications engineered with luxury design systems, zero layout shift, and serverless execution.',
-    fullDescription: 'We engineer digital products with microsecond performance, accessible UX, and modular visual architecture. Crafted with Next.js App Router, React 19, custom design tokens, and fluid Motion micro-interactions.',
+    badge: 'Fullstack Engineering',
+    shortDescription: 'Fast, accessible Next.js and React web applications built for reliability, scale, and seamless user experiences.',
+    fullDescription: 'Problem: Slow, fragile web applications create user friction, increase bounce rates, and complicate feature delivery.\nSolution: We build resilient full-stack applications with modular component architecture, low bundle overhead, and sub-second page interaction times.\nTechnology: Built using Next.js App Router, React, TypeScript, Tailwind CSS, and edge deployment pipelines.',
     iconName: 'Layout',
     deliverables: [
-      'Next.js 15 / React 19 Custom SaaS Applications',
-      'Bespoke Luxury Design Systems & Component Libraries',
-      'Edge-Rendered Dashboards & Data Visualization',
-      'Progressive Web Apps & Sub-100ms LCP Optimization',
-      'Full-Stack API Routes & Security Middleware'
+      'Next.js & React Full-Stack SaaS Platforms',
+      'Design Systems & Accessible Component Libraries',
+      'Real-Time Operational Dashboards',
+      'Edge-Rendered & Server-Side APIs',
+      'Performance & Core Web Vitals Optimization'
     ],
     techStack: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite', 'Recharts'],
-    sla: '100/100 Lighthouse Performance Goal',
-    idealFor: 'Companies seeking high-converting, world-class modern web software.'
+    sla: 'Sub-Second Page Loads & Clean Architecture',
+    idealFor: 'Businesses needing reliable, high-converting modern digital products.'
   },
   {
     id: 'cloud-engineering',
-    title: 'Cloud-Native Architecture & DevOps',
+    title: 'Cloud Infrastructure & Reliability Engineering',
     category: 'cloud',
     badge: 'Infrastructure',
-    shortDescription: 'Scalable cloud infrastructure, container orchestration, zero-downtime CI/CD pipelines, and automated IaC deployments.',
-    fullDescription: 'We architect resilience. Our cloud team designs Kubernetes clusters, serverless Cloud Run containers, automated Terraform IaC scripts, and distributed caching layers built to handle millions of requests without manual intervention.',
+    shortDescription: 'Scalable cloud platforms, automated deployment workflows, and resilient system architecture.',
+    fullDescription: 'Problem: Brittle server setups and manual deployment steps lead to unexpected downtime, security vulnerabilities, and deployment risks.\nSolution: We design automated infrastructure as code and containerized deployment pipelines that scale predictably under peak loads.\nTechnology: Configured with Google Cloud Platform, Kubernetes, Docker, Terraform, and OpenTelemetry observability.',
     iconName: 'Cloud',
     deliverables: [
-      'Google Cloud / AWS Container Orchestration',
-      'Terraform & Pulumi Infrastructure-as-Code',
-      'Zero-Downtime CI/CD Pipelines (GitHub Actions)',
-      'Automated Distributed Database Replication',
-      'Observability & Datadog / OpenTelemetry Tracing'
+      'Cloud Container Orchestration',
+      'Infrastructure-as-Code (Terraform)',
+      'Automated CI/CD Deployment Pipelines',
+      'Distributed Caching & Database Replication',
+      'System Observability & Tracing Setup'
     ],
     techStack: ['Google Cloud Run', 'AWS ECS/EKS', 'Kubernetes', 'Terraform', 'Docker', 'Redis', 'PostgreSQL'],
-    sla: '99.99% Infrastructure Uptime SLA',
-    idealFor: 'High-growth startups requiring scale-ready cloud infrastructure.'
+    sla: 'High-Availability Infrastructure Targets',
+    idealFor: 'Growth teams upgrading legacy systems for stability and scale.'
   },
   {
     id: 'workflow-automation',
-    title: 'Intelligent Enterprise Automation',
+    title: 'Workflow Automation & System Integration',
     category: 'automation',
-    badge: 'System Ops',
-    shortDescription: 'Event-driven workflow engines, automated data processing pipelines, and resilient third-party API integration networks.',
-    fullDescription: 'Eliminate manual operational bottlenecks with high-reliability event pipelines. We design self-healing background job processors, webhook infrastructure, and AI-powered document extraction pipelines.',
+    badge: 'System Integration',
+    shortDescription: 'Event-driven integration pipelines, background job processing, and secure enterprise API gateways.',
+    fullDescription: 'Problem: Disconnected business tools and manual data entry create operational bottlenecks and data sync errors.\nSolution: We construct self-healing background job processors, message queues, and API integrations that link your operational tools together.\nTechnology: Built using event streaming, message queues, background worker tasks, and fault-tolerant API middleware.',
     iconName: 'Zap',
     deliverables: [
-      'Event-Driven Microservice Architectures',
-      'Automated Document Processing & Data Parsing',
-      'Custom Webhook Gateways & Distributed Queues',
-      'ERP / CRM & Enterprise System Connectors',
-      'Real-Time Audit Logging & Error Recovery'
+      'Event-Driven Microservices',
+      'Automated Data Transformation Pipelines',
+      'Third-Party API & ERP Connectors',
+      'Background Job Queues & Webhooks',
+      'Audit Logging & Fault-Tolerant Recovery'
     ],
     techStack: ['Celery', 'RabbitMQ', 'Kafka', 'Google Pub/Sub', 'Node.js', 'Python', 'PostgreSQL'],
-    sla: '< 50ms Processing Overhead',
-    idealFor: 'Organizations looking to replace repetitive manual processes with code.'
+    sla: 'Reliable Async Message Delivery',
+    idealFor: 'Organizations seeking to replace repetitive manual processes with robust software.'
   }
 ];
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    id: 'aegis-financial',
-    title: 'Aegis Intelligence',
-    clientCategory: 'Fintech & Compliance',
-    tagline: 'Autonomous Document Audit Engine powered by RAG & Vector Search',
-    summary: 'Engineered a high-concurrency document processing pipeline for financial auditing, reducing audit review cycles from 4 hours to 45 seconds.',
-    challenge: 'A financial compliance firm was overwhelmed by manual verification of 500+ page regulatory disclosures and unstructured PDF reports.',
-    solution: 'Celestial Devs designed a hybrid vector-keyword RAG architecture using Gemini 2.5 Flash, Qdrant vector database, and an edge-rendered Next.js analyst dashboard.',
+    id: 'enterprise-doc-intelligence',
+    title: 'Enterprise Document Intelligence',
+    clientCategory: 'Reference Architecture',
+    tagline: 'Automated Document Ingestion & Compliance Verification System',
+    summary: 'A reference architecture for enterprise compliance teams requiring rapid verification across unstructured disclosures and complex contracts.',
+    challenge: 'Manual review of multi-hundred page regulatory disclosures creates severe operational bottlenecks and human error risks.',
+    solution: 'A hybrid keyword and semantic retrieval pipeline paired with structured data extraction and an interactive verification dashboard.',
     results: [
-      { label: 'Audit Speedup', value: '320%' },
-      { label: 'Accuracy Benchmark', value: '99.4%' },
-      { label: 'Monthly Document Volume', value: '1.2M Pages' }
+      { label: 'Primary Focus', value: 'Accuracy & Citation' },
+      { label: 'Key Capability', value: 'Multi-Format Ingestion' },
+      { label: 'Deployment Pattern', value: 'Private Cloud VPC' }
     ],
-    techStack: ['Gemini 2.5 Flash', 'FastAPI', 'Qdrant', 'Next.js 15', 'Tailwind CSS'],
+    techStack: ['Gemini API', 'FastAPI', 'Qdrant', 'Next.js 15', 'Tailwind CSS'],
     imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
-    architectureType: 'Autonomous RAG Pipeline'
+    architectureType: 'Example Architecture'
   },
   {
-    id: 'nova-logistics',
-    title: 'Nova Global Logistics',
-    clientCategory: 'Supply Chain & IoT',
-    tagline: 'Predictive Routing Engine & Real-Time Telemetry Dashboard',
-    summary: 'Built a cloud-native event-stream platform processing over 50,000 real-time location and weather events per second.',
-    challenge: 'Legacy batch logistics updates resulted in delayed route adjustments and high fuel burn across cross-country fleet vehicles.',
-    solution: 'Designed a microservice stream architecture on Google Cloud Run and Redis Pub/Sub, coupled with an ultra-responsive WebGL fleet monitoring map.',
+    id: 'supply-chain-analytics',
+    title: 'Supply Chain Telemetry Platform',
+    clientCategory: 'Reference Architecture',
+    tagline: 'Event-Driven Data Ingestion & Fleet Telemetry Dashboard',
+    summary: 'A reference blueprint for streaming vehicle telemetry and sensor data into real-time operational views.',
+    challenge: 'Batch updates in legacy tracking platforms cause delayed route adjustments and inefficient resource allocation.',
+    solution: 'An event-stream pipeline on containerized microservices coupled with lightweight WebGL telemetry mapping.',
     results: [
-      { label: 'Event Throughput', value: '50k/sec' },
-      { label: 'Route Delay Reduction', value: '42%' },
-      { label: 'Serverless Cost Saved', value: '65%' }
+      { label: 'Primary Focus', value: 'Low Latency Streaming' },
+      { label: 'Key Capability', value: 'Real-Time Telemetry' },
+      { label: 'Deployment Pattern', value: 'Serverless Auto-Scaling' }
     ],
     techStack: ['Google Cloud Run', 'Redis', 'WebSockets', 'React 19', 'Deck.gl'],
     imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80',
-    architectureType: 'Event-Driven Microservices'
+    architectureType: 'Example Architecture'
   },
   {
-    id: 'aether-health',
-    title: 'Aether Medical Research',
-    clientCategory: 'HealthTech & AI',
-    tagline: 'Secure Clinical Trial Analytics & Privacy-Preserving AI Gateway',
-    summary: 'Architected a HIPAA-compliant multi-agent research platform enabling bio-analysts to query clinical literature securely.',
-    challenge: 'Medical research teams required AI analytical tools while maintaining zero data retention and strict patient record privacy controls.',
-    solution: 'Crafted a zero-trust LLM proxy framework with client-side field masking, tokenized audit trails, and encrypted vector embeddings.',
+    id: 'healthcare-knowledge-assistant',
+    title: 'Healthcare Knowledge Assistant',
+    clientCategory: 'Reference Architecture',
+    tagline: 'Secure Medical Literature Search & Privacy Guardrails',
+    summary: 'A reference blueprint for research organizations searching medical literature while maintaining strict data governance.',
+    challenge: 'Research teams require efficient search across technical papers without exposing sensitive records to third-party endpoints.',
+    solution: 'A zero-trust data pipeline utilizing field masking, encrypted vector indexes, and isolated model execution.',
     results: [
-      { label: 'Compliance Grade', value: 'SOC2 & HIPAA' },
-      { label: 'Query Latency', value: '< 240ms' },
-      { label: 'Researchers Onboarded', value: '4,500+' }
+      { label: 'Primary Focus', value: 'Data Isolation & Safety' },
+      { label: 'Key Capability', value: 'Encrypted Vector Indexing' },
+      { label: 'Deployment Pattern', value: 'Zero-Storage Proxy Layer' }
     ],
     techStack: ['Python', 'FastAPI', 'PostgreSQL', 'Docker', 'Google Cloud KMC'],
     imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
-    architectureType: 'Zero-Trust AI Gateway'
+    architectureType: 'Example Architecture'
   }
 ];
 
 export const INSIGHTS_ARTICLES: Article[] = [
   {
     id: 'deterministic-rag-systems',
-    title: 'Architecting Deterministic RAG Pipelines for High-Stakes Enterprise Workloads',
-    category: 'AI Architecture',
+    title: 'Architecting Deterministic Knowledge Retrieval Pipelines',
+    category: 'System Architecture',
     readTime: '6 min read',
     date: 'July 2026',
-    author: { name: 'Dr. Evelyn Vance', role: 'Principal AI Architect' },
-    excerpt: 'Why standard naive RAG fails in production, and how hybrid dense-sparse indexing with reranking creates hallucination-free AI search.',
+    author: { name: 'Celestial Engineering Team', role: 'Engineering Studio' },
+    excerpt: 'Why standard naive semantic search falls short in enterprise workloads, and how hybrid dense-sparse indexing creates reliable retrieval.',
     content: [
-      'Naive Retrieval-Augmented Generation (RAG) often suffers from hallucination and low precision when deployed to complex enterprise datasets containing tables, legal clauses, and dense numerical figures.',
-      'To achieve deterministic performance, modern AI architecture requires a multi-stage retrieval stack: hybrid vector + BM25 keyword matching, reciprocal rank fusion (RRF), and fine-tuned cross-encoder reranking before prompt injection.',
-      'In this technical overview, we explore how Celestial Devs structures vector chunking strategies, semantic caching with Redis, and automated evaluation metrics (RAGAS) to maintain 99%+ context accuracy.'
+      'Standard retrieval-augmented pipelines often suffer from hallucination and low precision when deployed to complex enterprise datasets containing tables, legal clauses, and dense numerical figures.',
+      'To achieve deterministic performance, modern retrieval architecture requires a multi-stage process: hybrid vector + keyword matching, reciprocal rank fusion, and fine-tuned cross-encoder reranking before context assembly.',
+      'In this technical overview, we explore how vector chunking strategies, semantic caching, and automated evaluation metrics maintain accuracy and data integrity.'
     ],
-    tags: ['RAG', 'Vector DB', 'Gemini API', 'Enterprise AI']
+    tags: ['Retrieval', 'Vector DB', 'Search', 'System Design']
   },
   {
     id: 'cloud-run-llm-streaming',
-    title: 'Optimizing Serverless Containers for Low-Latency LLM Streaming',
+    title: 'Optimizing Serverless Containers for Low-Latency Event Streaming',
     category: 'Cloud Engineering',
     readTime: '8 min read',
     date: 'June 2026',
-    author: { name: 'Marcus Thorne', role: 'Lead Infrastructure Engineer' },
-    excerpt: 'A deep-dive into configuring Cloud Run concurrency, HTTP/2 Server-Sent Events (SSE), and memory allocation for microsecond initial token response.',
+    author: { name: 'Celestial Engineering Team', role: 'Engineering Studio' },
+    excerpt: 'Configuring Cloud Run concurrency, HTTP/2 Server-Sent Events (SSE), and container memory allocation for low initial response latency.',
     content: [
-      'Streaming token generation provides immediate visual feedback to users, but standard serverless cold starts can add unwanted latency overhead if container instances are misconfigured.',
-      'By tuning Google Cloud Run min-instances, leveraging HTTP/2 streaming protocols, and maintaining warm connection pools to Gemini API gateways, latency-to-first-token can be reduced below 80ms globally.',
-      'We share our production-tested Terraform templates and Dockerfile multi-stage build patterns optimized for TypeScript and Python container payloads.'
+      'Streaming token generation provides immediate visual feedback to users, but unoptimized serverless cold starts can add unwanted latency overhead if container instances are misconfigured.',
+      'By tuning Google Cloud Run min-instances, leveraging HTTP/2 streaming protocols, and maintaining warm connection pools to API gateways, latency can be minimized globally.',
+      'We share production-tested Terraform templates and Dockerfile multi-stage build patterns optimized for TypeScript and Python container payloads.'
     ],
     tags: ['Cloud Run', 'Serverless', 'DevOps', 'Performance']
   },
@@ -170,12 +170,12 @@ export const INSIGHTS_ARTICLES: Article[] = [
     category: 'UI & Design Systems',
     readTime: '5 min read',
     date: 'May 2026',
-    author: { name: 'Seraphina Lin', role: 'Design Systems Architect' },
-    excerpt: 'How to transition from static forms to fluid, conversational, and generative user interfaces without losing visual discipline.',
+    author: { name: 'Celestial Engineering Team', role: 'Engineering Studio' },
+    excerpt: 'Transitioning from static forms to fluid, conversational, and generative user interfaces without sacrificing visual discipline.',
     content: [
-      'As artificial intelligence embeds itself into everyday software, user interfaces must evolve beyond rigid input forms without descending into noisy, unstyled chat windows.',
-      'We discuss our design philosophy at Celestial Devs: combining luxury dark themes, restrained motion graphics, and contextual canvas controls that make complex machine learning models feel intuitive and empowering.',
-      'Includes practical Tailwind CSS token patterns and React dynamic layout techniques for responsive generative outputs.'
+      'As intelligent features embed themselves into everyday software, user interfaces must evolve beyond rigid input forms without descending into unstyled chat windows.',
+      'We discuss our design philosophy at Celestial Devs: combining structured themes, restrained motion graphics, and contextual canvas controls that make complex capabilities intuitive and empowering.',
+      'Includes practical Tailwind CSS token patterns and React dynamic layout techniques for responsive interface outputs.'
     ],
     tags: ['Design Systems', 'UX Design', 'Tailwind CSS', 'React 19']
   }
@@ -192,24 +192,24 @@ export const TECH_STACK_LAYERS = [
     name: 'API Gateway & Security',
     icon: 'ShieldCheck',
     techs: ['Express / FastAPI', 'Zero-Trust Proxies', 'JWT / OAuth', 'Cloud Run Ingress', 'Rate Limiting'],
-    description: 'Encrypted communication channels, enterprise RBAC, and payload validation.'
+    description: 'Encrypted communication channels, enterprise role-based access control, and payload validation.'
   },
   {
-    name: 'Intelligence & Agent Engine',
+    name: 'Logic & Processing Engine',
     icon: 'BrainCircuit',
-    techs: ['Gemini 2.5 / 3.0', 'LangChain / LlamaIndex', 'Multi-Agent Routers', 'Function Calling', 'Custom Guardrails'],
-    description: 'Autonomous reasoning, structured JSON output generation, and semantic task execution.'
+    techs: ['Gemini API', 'LangChain / LlamaIndex', 'Task Routers', 'Function Calling', 'Custom Guardrails'],
+    description: 'Structured reasoning, schema-constrained output generation, and task execution pipelines.'
   },
   {
     name: 'Vector & Data Storage',
     icon: 'Database',
     techs: ['Qdrant Vector DB', 'PostgreSQL (pgvector)', 'Redis Cache', 'Google Cloud Storage'],
-    description: 'Sub-5ms vector index lookups, distributed transactional state, and document stores.'
+    description: 'Vector index lookups, transactional state management, and structured document stores.'
   },
   {
     name: 'Cloud & Observability',
     icon: 'Server',
     techs: ['Google Cloud Platform', 'Docker Containers', 'Terraform IaC', 'OpenTelemetry', 'GitHub Actions'],
-    description: 'Automated CI/CD deployments, auto-scaling compute, and distributed trace telemetry.'
+    description: 'Automated CI/CD deployments, auto-scaling compute, and distributed system telemetry.'
   }
 ];

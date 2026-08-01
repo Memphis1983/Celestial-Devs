@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ArrowUpRight, ShieldCheck, Terminal, Heart } from 'lucide-react';
+import { Sparkles, ArrowUpRight } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -30,12 +30,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => 
             </div>
 
             <p className="text-xs text-slate-300 font-light leading-relaxed max-w-sm">
-              Designing and engineering high-performance digital products, autonomous multi-agent systems, and cloud-native software infrastructure for forward-thinking organizations.
+              Designing and engineering high-performance digital products, intelligent data systems, and cloud-native software infrastructure for forward-thinking organizations.
             </p>
 
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>99.99% Systems Operational</span>
+              <span>Verified Production Standards</span>
             </div>
           </div>
 
@@ -46,33 +46,38 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => 
             </span>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => onNavigate('overview')} className="hover:text-amber-300 transition-colors">
+                <button onClick={() => onNavigate('overview')} className="hover:text-amber-300 transition-colors cursor-pointer">
                   Overview
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-amber-300 transition-colors">
+                <button onClick={() => onNavigate('services')} className="hover:text-amber-300 transition-colors cursor-pointer">
                   Services & Disciplines
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('estimator')} className="hover:text-amber-300 transition-colors">
-                  AI Architecture Builder
+                <button onClick={() => onNavigate('estimator')} className="hover:text-amber-300 transition-colors cursor-pointer">
+                  Architecture Builder
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('architecture')} className="hover:text-amber-300 transition-colors">
+                <button onClick={() => onNavigate('architecture')} className="hover:text-amber-300 transition-colors cursor-pointer">
                   The Celestial Stack
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('portfolio')} className="hover:text-amber-300 transition-colors">
-                  Case Studies & Work
+                <button onClick={() => onNavigate('portfolio')} className="hover:text-amber-300 transition-colors cursor-pointer">
+                  Reference Blueprints
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('insights')} className="hover:text-amber-300 transition-colors">
-                  Engineering Research
+                <button onClick={() => onNavigate('insights')} className="hover:text-amber-300 transition-colors cursor-pointer">
+                  Engineering Journal
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('about')} className="hover:text-amber-300 transition-colors cursor-pointer">
+                  Engineering Principles
                 </button>
               </li>
             </ul>
@@ -81,16 +86,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => 
           {/* Contact Action */}
           <div className="md:col-span-4 space-y-4 p-6 rounded-2xl glass-card border border-amber-500/20">
             <span className="text-xs font-mono text-amber-400 uppercase tracking-wider block">
-              Ready to Engineer Your Vision?
+              Schedule an Engineering Review
             </span>
             <p className="text-xs text-slate-300 leading-relaxed font-light">
-              Schedule a technical discovery session with our senior engineering team to evaluate architecture options, vector storage, and AI agent automation.
+              Schedule a technical consultation with our engineering team to evaluate architecture options, data storage, and custom software solutions.
             </p>
             <button
               onClick={onOpenContact}
               className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-slate-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:brightness-110 shadow-[0_0_15px_rgba(226,184,89,0.25)] transition-all cursor-pointer"
             >
-              <span>Book Discovery Consultation</span>
+              <span>Schedule Architecture Review</span>
               <ArrowUpRight className="w-4 h-4" />
             </button>
           </div>
@@ -103,7 +108,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => 
             © {new Date().getFullYear()} Celestial Devs. All rights reserved.
           </div>
           <div className="flex items-center gap-4 text-[11px]">
-            <span>Privacy Policy</span>
+            <span>Engineering Principles</span>
             <span>•</span>
             <span>Security SLAs</span>
             <span>•</span>

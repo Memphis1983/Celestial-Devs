@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CASE_STUDIES } from '../data/mockData';
 import { CaseStudy } from '../types';
-import { ExternalLink, CheckCircle2, ArrowRight, X, Layers, Sparkles } from 'lucide-react';
+import { ArrowRight, X, Sparkles } from 'lucide-react';
 
 export const PortfolioSection: React.FC = () => {
   const [activeStudy, setActiveStudy] = useState<CaseStudy | null>(null);
@@ -15,13 +15,13 @@ export const PortfolioSection: React.FC = () => {
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-mono">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>PROVEN OUTCOMES</span>
+              <span>REFERENCE SOLUTIONS</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-              Selected Case Studies
+              Example Solution Blueprints
             </h2>
             <p className="text-sm sm:text-base text-slate-400 font-light leading-relaxed">
-              Real-world engineering implementations built for demanding enterprise workloads, zero-latency streaming, and autonomous data parsing.
+              Architectural reference solutions engineered for enterprise workloads, document processing, and real-time event telemetry.
             </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ export const PortfolioSection: React.FC = () => {
                   onClick={() => setActiveStudy(study)}
                   className="w-full py-2.5 rounded-xl text-xs font-semibold text-slate-200 bg-slate-900 border border-amber-500/20 hover:border-amber-400 hover:text-white transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Read Technical Case Study</span>
+                  <span>Examine Technical Blueprint</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -100,7 +100,7 @@ export const PortfolioSection: React.FC = () => {
             
             <button
               onClick={() => setActiveStudy(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white"
+              className="absolute top-5 right-5 p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -124,19 +124,19 @@ export const PortfolioSection: React.FC = () => {
               </div>
 
               <div className="p-4 rounded-xl bg-slate-950 border border-amber-500/20 space-y-2">
-                <span className="text-xs font-mono text-amber-400 uppercase block">The Celestial Solution</span>
+                <span className="text-xs font-mono text-amber-400 uppercase block">The Architectural Solution</span>
                 <p className="text-xs text-slate-300 leading-relaxed">{activeStudy.solution}</p>
               </div>
             </div>
 
             <div className="space-y-3">
               <span className="text-xs font-mono text-amber-400 uppercase tracking-wider block">
-                Validated Performance Metrics
+                Architecture Specification Highlights
               </span>
               <div className="grid grid-cols-3 gap-3">
                 {activeStudy.results.map((res, idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-center">
-                    <span className="text-lg font-bold text-white block">{res.value}</span>
+                    <span className="text-sm font-bold text-white block">{res.value}</span>
                     <span className="text-[10px] text-slate-300 font-mono block">{res.label}</span>
                   </div>
                 ))}
@@ -146,9 +146,9 @@ export const PortfolioSection: React.FC = () => {
             <div className="pt-4 border-t border-slate-800 flex justify-end">
               <button
                 onClick={() => setActiveStudy(null)}
-                className="px-6 py-2.5 rounded-full text-xs font-medium text-slate-300 bg-slate-800 hover:bg-slate-700"
+                className="px-6 py-2.5 rounded-full text-xs font-medium text-slate-300 bg-slate-800 hover:bg-slate-700 cursor-pointer"
               >
-                Close Case Study
+                Close Specification
               </button>
             </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { INSIGHTS_ARTICLES } from '../data/mockData';
 import { Article } from '../types';
-import { BookOpen, ArrowRight, X, Sparkles, Clock, Tag } from 'lucide-react';
+import { BookOpen, ArrowRight, X, Clock } from 'lucide-react';
 
 export const InsightsSection: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
@@ -15,13 +15,13 @@ export const InsightsSection: React.FC = () => {
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-mono">
               <BookOpen className="w-3.5 h-3.5" />
-              <span>ENGINEERING SPECS & INSIGHTS</span>
+              <span>TECHNICAL INSIGHTS</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-              Whitepapers & Technical Research
+              Engineering Journal
             </h2>
             <p className="text-sm sm:text-base text-slate-400 font-light leading-relaxed">
-              In-depth analysis on RAG determinism, serverless container cold starts, and luxury AI-native UI design systems. Written by Celestial Devs engineers.
+              Technical articles, architectural research, and system design insights published by Celestial Devs engineers.
             </p>
           </div>
         </div>
@@ -74,7 +74,7 @@ export const InsightsSection: React.FC = () => {
 
                 <button
                   onClick={() => setSelectedArticle(article)}
-                  className="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 hover:bg-amber-500/20 transition-colors"
+                  className="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 hover:bg-amber-500/20 transition-colors cursor-pointer"
                 >
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -93,7 +93,7 @@ export const InsightsSection: React.FC = () => {
             
             <button
               onClick={() => setSelectedArticle(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white"
+              className="absolute top-5 right-5 p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -127,7 +127,7 @@ export const InsightsSection: React.FC = () => {
 
               <button
                 onClick={() => setSelectedArticle(null)}
-                className="px-6 py-2 rounded-full text-xs font-medium text-slate-300 bg-slate-800 hover:bg-slate-700"
+                className="px-6 py-2 rounded-full text-xs font-medium text-slate-300 bg-slate-800 hover:bg-slate-700 cursor-pointer"
               >
                 Close Article
               </button>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Menu, X, ArrowUpRight, Compass, Cpu, Layers, BookOpen, Layers3 } from 'lucide-react';
+import { Sparkles, Menu, X, ArrowUpRight } from 'lucide-react';
 
 interface NavbarProps {
   activeSection: string;
@@ -22,11 +22,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate, onOpe
   const navItems = [
     { id: 'overview', label: 'Overview' },
     { id: 'services', label: 'Services' },
-    { id: 'estimator', label: 'AI Architecture Builder' },
+    { id: 'estimator', label: 'Architecture Builder' },
     { id: 'architecture', label: 'Celestial Stack' },
-    { id: 'portfolio', label: 'Work & Studies' },
-    { id: 'insights', label: 'Insights' },
-    { id: 'about', label: 'Studio' }
+    { id: 'portfolio', label: 'Reference Blueprints' },
+    { id: 'insights', label: 'Engineering Journal' },
+    { id: 'about', label: 'Engineering Principles' }
   ];
 
   return (
@@ -41,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate, onOpe
         {/* Brand Logo */}
         <button
           onClick={() => onNavigate('overview')}
-          className="flex items-center gap-3 group text-left focus:outline-none"
+          className="flex items-center gap-3 group text-left focus:outline-none cursor-pointer"
         >
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400/20 via-amber-500/10 to-slate-900 border border-amber-500/30 flex items-center justify-center transition-all duration-300 group-hover:border-amber-400 group-hover:shadow-[0_0_20px_rgba(226,184,89,0.3)]">
             <Sparkles className="w-5 h-5 text-amber-400 transition-transform duration-300 group-hover:rotate-12" />
@@ -69,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate, onOpe
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
-                className={`px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
+                className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all duration-200 cursor-pointer ${
                   isActive
                     ? 'bg-gradient-to-r from-amber-500/20 to-amber-600/10 text-amber-300 border border-amber-500/30 shadow-[0_0_12px_rgba(226,184,89,0.15)]'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
@@ -87,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate, onOpe
             onClick={onOpenContact}
             className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide text-slate-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:brightness-110 transition-all duration-300 shadow-[0_0_20px_rgba(226,184,89,0.25)] hover:shadow-[0_0_30px_rgba(226,184,89,0.4)] cursor-pointer"
           >
-            <span>Book Consultation</span>
+            <span>Schedule Architecture Review</span>
             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
         </div>
@@ -131,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate, onOpe
               }}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold text-slate-950 bg-gradient-to-r from-amber-300 to-amber-500 hover:brightness-105"
             >
-              <span>Book Consultation</span>
+              <span>Schedule Architecture Review</span>
               <ArrowUpRight className="w-4 h-4" />
             </button>
           </div>

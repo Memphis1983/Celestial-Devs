@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ArrowRight, ShieldCheck, Cpu, Zap, Play, Terminal, Layers } from 'lucide-react';
+import { Sparkles, ArrowRight, ShieldCheck, Cpu, Zap, Terminal, Layers } from 'lucide-react';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
@@ -23,37 +23,35 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenContact, heroBgPat
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/90 border border-amber-500/30 text-amber-300 text-xs font-mono tracking-wider shadow-[0_0_15px_rgba(226,184,89,0.15)]">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span>AI ENGINEERING STUDIO</span>
-              <span className="text-slate-600">|</span>
-              <span className="text-slate-400">ACCEPTING Q3/Q4 PARTNERSHIPS</span>
+              <span>SOFTWARE & AI ENGINEERING STUDIO</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-white leading-[1.12]">
               We Engineer <br />
-              <span className="text-gradient-gold">Intelligence</span> <br />
-              Into Everything.
+              <span className="text-gradient-gold">Software Systems</span> <br />
+              That Scale.
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-light">
-              Celestial Devs builds high-performance digital products, autonomous multi-agent pipelines, and cloud-native software that automate complex workflows, elevate customer experiences, and scale with your ambition.
+              Celestial Devs designs high-performance digital products, intelligent data pipelines, and cloud-native software infrastructure engineered for business growth, operational reliability, and technical longevity.
             </p>
 
             {/* CTA Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <button
-                onClick={() => onNavigate('estimator')}
+                onClick={onOpenContact}
                 className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full text-sm font-semibold text-slate-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:brightness-110 transition-all duration-300 shadow-[0_0_25px_rgba(226,184,89,0.3)] hover:shadow-[0_0_35px_rgba(226,184,89,0.5)] cursor-pointer"
               >
                 <Cpu className="w-4 h-4 text-slate-950" />
-                <span>AI Architecture Builder</span>
+                <span>Schedule an Architecture Review</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
               <button
                 onClick={() => onNavigate('services')}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-medium text-slate-200 bg-slate-900/80 border border-amber-500/20 hover:border-amber-400/50 hover:bg-slate-800/80 transition-all duration-300"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-medium text-slate-200 bg-slate-900/80 border border-amber-500/20 hover:border-amber-400/50 hover:bg-slate-800/80 transition-all duration-300 cursor-pointer"
               >
                 <span>Explore Services</span>
               </button>
@@ -66,8 +64,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenContact, heroBgPat
                   <Zap className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-xs font-semibold text-white block">AI-First Core</span>
-                  <span className="text-[11px] text-slate-400">Agents & RAG Pipelines</span>
+                  <span className="text-xs font-semibold text-white block">Engineered Quality</span>
+                  <span className="text-[11px] text-slate-400">Maintainable Codebases</span>
                 </div>
               </div>
 
@@ -76,8 +74,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenContact, heroBgPat
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-xs font-semibold text-white block">Zero-Trust SLA</span>
-                  <span className="text-[11px] text-slate-400">Enterprise Guardrails</span>
+                  <span className="text-xs font-semibold text-white block">Security First</span>
+                  <span className="text-[11px] text-slate-400">Zero-Trust Guardrails</span>
                 </div>
               </div>
 
@@ -86,8 +84,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenContact, heroBgPat
                   <Layers className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-xs font-semibold text-white block">Sub-50ms Target</span>
-                  <span className="text-[11px] text-slate-400">Edge Optimization</span>
+                  <span className="text-xs font-semibold text-white block">Performance Focus</span>
+                  <span className="text-[11px] text-slate-400">Low Latency Execution</span>
                 </div>
               </div>
             </div>
@@ -108,7 +106,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenContact, heroBgPat
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500/80" />
-                  <span className="text-[10px] text-emerald-400 uppercase">Live Node</span>
+                  <span className="text-[10px] text-emerald-400 uppercase">Production Architecture</span>
                 </div>
               </div>
 
@@ -131,10 +129,10 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenContact, heroBgPat
                 <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-950/85 backdrop-blur-md border border-amber-500/20 shadow-2xl flex items-center justify-between">
                   <div>
                     <span className="text-[11px] font-mono text-amber-400 uppercase tracking-wider block">
-                      Autonomous Intelligence Gateway
+                      System Architecture
                     </span>
                     <span className="text-xs font-medium text-white">
-                      Multi-LLM Routing & Deterministic RAG
+                      Model Routing & Data Pipelines
                     </span>
                   </div>
                   <button

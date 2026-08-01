@@ -1,26 +1,31 @@
 import React from 'react';
-import { Sparkles, ShieldCheck, Zap, Layers, Compass, CheckCircle2 } from 'lucide-react';
+import { Sparkles, ShieldCheck, Zap, Layers, Compass, Code2 } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   const principles = [
     {
-      title: 'Precision Engineering Over Hype',
-      description: 'We do not build speculative wrappers or unmaintainable prototypes. Every line of code is typed, tested, and optimized for long-term production stability.',
+      title: 'Simplicity scales.',
+      description: 'Complex abstractions introduce hidden failure modes. We favor straightforward, predictable architectures that are easy to reason about, debug, and maintain over time.',
       icon: ShieldCheck
     },
     {
-      title: 'Zero-Noise Architecture',
-      description: 'Complex software should feel simple. We eliminate redundant microservices, unneeded dependencies, and bloated UI components to maximize speed.',
+      title: 'Every dependency has a cost.',
+      description: 'We rigorously evaluate third-party packages and external integrations. Unchecked dependencies inflate bundle size, expand the attack surface, and complicate long-term maintenance.',
       icon: Zap
     },
     {
-      title: 'Security-First AI Guardrails',
-      description: 'Generative AI must never leak customer data or hallucinate mission-critical decisions. We embed deterministic validation layers into every LLM pipeline.',
+      title: 'Maintainability beats cleverness.',
+      description: 'Code is read far more often than it is written. Clear, strictly typed, and well-structured codebases empower software teams to ship features with speed and confidence.',
+      icon: Code2
+    },
+    {
+      title: 'Reliability is a feature.',
+      description: 'System uptime, deterministic error boundaries, and self-healing fallback mechanisms are non-negotiable requirements for any production application.',
       icon: Layers
     },
     {
-      title: 'Scalable Cloud Foundations',
-      description: 'Built on Google Cloud Run and Kubernetes, our infrastructures scale automatically from zero to millions of active requests with minimal cloud overhead.',
+      title: 'AI should reduce complexity—not create it.',
+      description: 'Language models and automated processing pipelines are valuable when they simplify workflows, not when they introduce unneeded fragility or unverified outputs.',
       icon: Compass
     }
   ];
@@ -33,18 +38,18 @@ export const AboutSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
             <Sparkles className="w-4 h-4 text-amber-400" />
-            <span>STUDIO MANIFESTO</span>
+            <span>CORE TENETS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-            Crafting Software with Celestial Precision
+            Engineering Principles
           </h2>
           <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed">
-            Celestial Devs is a specialized AI Engineering Studio. We operate at the intersection of modern full-stack engineering, cloud infrastructure, and artificial intelligence.
+            Celestial Devs operates as an engineering studio guided by strict technical tenets. We prioritize software craftsmanship, maintainability, and operational stability.
           </p>
         </div>
 
         {/* Principles Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {principles.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -66,41 +71,41 @@ export const AboutSection: React.FC = () => {
           })}
         </div>
 
-        {/* Studio Operating Stats */}
+        {/* Studio Engineering Highlights */}
         <div className="glass-card rounded-2xl p-8 border border-amber-500/20 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div className="space-y-1">
-            <span className="text-3xl sm:text-4xl font-serif font-bold text-gradient-gold block">
-              99.99%
+            <span className="text-xl sm:text-2xl font-serif font-bold text-gradient-gold block">
+              Strict TypeScript
             </span>
             <span className="text-xs font-mono text-slate-400 uppercase tracking-wider block">
-              System Uptime Target
+              100% Type-Safe Codebases
             </span>
           </div>
 
           <div className="space-y-1">
-            <span className="text-3xl sm:text-4xl font-serif font-bold text-gradient-gold block">
-              &lt; 50ms
+            <span className="text-xl sm:text-2xl font-serif font-bold text-gradient-gold block">
+              Modular Architecture
             </span>
             <span className="text-xs font-mono text-slate-400 uppercase tracking-wider block">
-              API Edge Latency Target
+              5-Layer Fault Isolation
             </span>
           </div>
 
           <div className="space-y-1">
-            <span className="text-3xl sm:text-4xl font-serif font-bold text-gradient-gold block">
-              100%
+            <span className="text-xl sm:text-2xl font-serif font-bold text-gradient-gold block">
+              Cloud-Native
             </span>
             <span className="text-xs font-mono text-slate-400 uppercase tracking-wider block">
-              Typed TypeScript
+              Containerized Infrastructure
             </span>
           </div>
 
           <div className="space-y-1">
-            <span className="text-3xl sm:text-4xl font-serif font-bold text-gradient-gold block">
-              Zero
+            <span className="text-xl sm:text-2xl font-serif font-bold text-gradient-gold block">
+              Deterministic Output
             </span>
             <span className="text-xs font-mono text-slate-400 uppercase tracking-wider block">
-              Unverifiable AI Hallucinations
+              Validated Execution Pipelines
             </span>
           </div>
         </div>

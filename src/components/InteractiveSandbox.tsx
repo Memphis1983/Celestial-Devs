@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Terminal, Play, Cpu, CheckCircle2, ShieldCheck, Database, Zap, RefreshCw, Layers } from 'lucide-react';
+import { Terminal, Play, Cpu, CheckCircle2, ShieldCheck, Database } from 'lucide-react';
 
 export const InteractiveSandbox: React.FC = () => {
   const [selectedPrompt, setSelectedPrompt] = useState(
-    'Analyze Q2 Financial Disclosure for compliance anomalies and calculate EBIT margin.'
+    'Extract structured compliance data and verify clauses from a document payload.'
   );
   const [isRunning, setIsRunning] = useState(false);
   const [currentStepIndex, setCurrentStepIndex] = useState(-1);
@@ -16,23 +16,23 @@ export const InteractiveSandbox: React.FC = () => {
   } | null>(null);
 
   const samplePrompts = [
-    'Analyze Q2 Financial Disclosure for compliance anomalies and calculate EBIT margin.',
-    'Route incoming tier-3 enterprise ticket and generate Contextual Resolution Plan.',
-    'Scan patient clinical trial report, redact PII fields, and extract biomarker entities.'
+    'Extract structured compliance data and verify clauses from a document payload.',
+    'Route incoming support request and synthesize resolution context.',
+    'Process unstructured record payload, sanitize fields, and extract target entities.'
   ];
 
   const executionSteps = [
     { title: 'Intent Classification & Model Selection', icon: Cpu, delay: 400 },
-    { title: 'Semantic Vector Retrieval (Qdrant Index)', icon: Database, delay: 600 },
-    { title: 'Zero-Trust Safety & PII Masking Check', icon: ShieldCheck, delay: 500 },
-    { title: 'Gemini 2.5 Multi-Agent Reasoning', icon: Terminal, delay: 700 },
+    { title: 'Semantic Vector Retrieval (Vector Index)', icon: Database, delay: 500 },
+    { title: 'Zero-Trust Safety & PII Masking Check', icon: ShieldCheck, delay: 400 },
+    { title: 'Structured Model Pipeline Execution', icon: Terminal, delay: 600 },
     { title: 'Response Verification & Format Validation', icon: CheckCircle2, delay: 400 }
   ];
 
   const handleRunSimulation = () => {
     setIsRunning(true);
     setCurrentStepIndex(0);
-    setLogs(['[00:00.000] Initializing Celestial Autonomous Agent Gateway...']);
+    setLogs(['[00:00.000] Initializing Execution Gateway...']);
     setExecutionStats(null);
 
     let step = 0;
@@ -43,7 +43,7 @@ export const InteractiveSandbox: React.FC = () => {
         const currentStep = executionSteps[step];
         setLogs((prev) => [
           ...prev,
-          `[+${(step + 1) * 120}ms] Running: ${currentStep.title}...`
+          `[+${(step + 1) * 110}ms] Running: ${currentStep.title}...`
         ]);
 
         step++;
@@ -54,18 +54,18 @@ export const InteractiveSandbox: React.FC = () => {
         setCurrentStepIndex(executionSteps.length);
         setLogs((prev) => [
           ...prev,
-          '[+248ms] Pipeline Execution Succeeded. Status: 200 OK. Guardrails Passed.'
+          '[+240ms] Pipeline Execution Succeeded. Status: 200 OK. Guardrails Passed.'
         ]);
         setExecutionStats({
-          totalLatencyMs: 248,
+          totalLatencyMs: 240,
           vectorCacheHit: true,
-          guardrailStatus: '100% Passed (Zero Hallucination)',
+          guardrailStatus: 'Passed Verification',
           tokensProcessed: 1420
         });
       }
     };
 
-    setTimeout(executeNextStep, 300);
+    setTimeout(executeNextStep, 250);
   };
 
   return (
@@ -76,13 +76,13 @@ export const InteractiveSandbox: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
             <Terminal className="w-4 h-4 text-amber-400" />
-            <span>LIVE AGENT SANDBOX</span>
+            <span>INTERACTIVE EXECUTION PIPELINE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-            See How Celestial Agents Execute Tasks
+            Observe Pipeline Architecture
           </h2>
           <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed">
-            Test our agent orchestration framework in action. Experience how multi-agent routers, vector lookups, and zero-trust guardrails process enterprise prompts with microsecond latency.
+            Test our task orchestration framework in action. Observe how model routing, semantic vector search, and safety validation layers execute structured workflows.
           </p>
         </div>
 
@@ -94,14 +94,14 @@ export const InteractiveSandbox: React.FC = () => {
             
             <div className="space-y-2">
               <span className="text-xs font-mono text-amber-400 uppercase tracking-wider block">
-                Select Simulation Scenario:
+                Select Test Scenario:
               </span>
               <div className="space-y-2">
                 {samplePrompts.map((promptText, idx) => (
                   <button
                     key={idx}
                     onClick={() => setSelectedPrompt(promptText)}
-                    className={`w-full p-3 rounded-xl text-left text-xs font-medium border transition-all ${
+                    className={`w-full p-3 rounded-xl text-left text-xs font-medium border transition-all cursor-pointer ${
                       selectedPrompt === promptText
                         ? 'bg-amber-500/20 border-amber-400 text-amber-200'
                         : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:text-white'
@@ -126,7 +126,7 @@ export const InteractiveSandbox: React.FC = () => {
               className="w-full py-3.5 rounded-xl font-semibold text-xs text-slate-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:brightness-110 shadow-[0_0_20px_rgba(226,184,89,0.3)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
             >
               <Play className="w-4 h-4 fill-slate-950 text-slate-950" />
-              <span>{isRunning ? 'Running Agent Simulation...' : 'Run Agent Pipeline Simulation'}</span>
+              <span>{isRunning ? 'Executing Pipeline Simulation...' : 'Run Pipeline Simulation'}</span>
             </button>
 
           </div>
@@ -138,7 +138,7 @@ export const InteractiveSandbox: React.FC = () => {
             <div className="flex items-center justify-between pb-3 border-b border-slate-800 font-mono text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping" />
-                <span>celestial_agent_router.log</span>
+                <span>celestial_execution_router.log</span>
               </div>
               <span>Protocol: SSE / HTTP2</span>
             </div>
@@ -146,7 +146,7 @@ export const InteractiveSandbox: React.FC = () => {
             {/* Pipeline Visual Node Progress */}
             <div className="space-y-2">
               <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">
-                Execution Pipeline Nodes
+                Pipeline Execution Nodes
               </span>
               <div className="grid grid-cols-5 gap-1.5">
                 {executionSteps.map((stepItem, idx) => {
@@ -179,7 +179,7 @@ export const InteractiveSandbox: React.FC = () => {
             <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 font-mono text-xs space-y-1.5 h-48 overflow-y-auto">
               {logs.length === 0 ? (
                 <span className="text-slate-600 italic">
-                  Press 'Run Agent Pipeline Simulation' to start execution sequence...
+                  Press 'Run Pipeline Simulation' to start execution sequence...
                 </span>
               ) : (
                 logs.map((logLine, idx) => (
@@ -206,11 +206,11 @@ export const InteractiveSandbox: React.FC = () => {
                 </div>
                 <div className="p-2.5 rounded-lg bg-slate-950 border border-amber-500/20">
                   <span className="text-slate-500 text-[10px] block">Vector Cache</span>
-                  <span className="text-emerald-400 font-bold">Hit (Qdrant Index)</span>
+                  <span className="text-emerald-400 font-bold">Search Hit</span>
                 </div>
                 <div className="p-2.5 rounded-lg bg-slate-950 border border-amber-500/20">
                   <span className="text-slate-500 text-[10px] block">Guardrails</span>
-                  <span className="text-white font-bold">100% Passed</span>
+                  <span className="text-white font-bold">{executionStats.guardrailStatus}</span>
                 </div>
               </div>
             )}
