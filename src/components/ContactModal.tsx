@@ -46,10 +46,15 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     setLoading(true);
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://formsubmit.co/ajax/support@celestialdevs.in', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          _subject: `New Celestial Devs Inquiry: ${formData.projectType}`,
+          _template: 'table',
+          _captcha: 'false'
+        })
       });
 
       const data = await res.json();
@@ -270,6 +275,16 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   </>
                 )}
               </button>
+
+              <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
+                <span>Prefer email?</span>
+                <a
+                  href="mailto:support@celestialdevs.in?subject=Project%20Inquiry%20-%20Celestial%20Devs"
+                  className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
+                >
+                  support@celestialdevs.in
+                </a>
+              </div>
 
             </form>
 

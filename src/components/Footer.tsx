@@ -98,6 +98,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => 
               <span>Schedule Architecture Review</span>
               <ArrowUpRight className="w-4 h-4" />
             </button>
+            <a
+              href="mailto:support@celestialdevs.in?subject=Engineering%20Consultation%20-%20Celestial%20Devs"
+              className="block text-center text-xs text-slate-300 hover:text-amber-300 transition-colors font-mono"
+            >
+              support@celestialdevs.in
+            </a>
           </div>
 
         </div>
